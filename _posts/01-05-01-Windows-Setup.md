@@ -5,18 +5,12 @@ anchor: windows_setup
 
 ## Windows Setup {#windows_setup_title}
 
-PHP is available in several ways for Windows. You can [download the binaries][php-downloads] and until recently you could use a '.msi' 
-installer. The installer is no longer supported and stops at PHP 5.3.0.
+PHP က Window မှာနည်းမျိုးစုံနဲ့ install လုပ်နိုင်ပါတယ်။ သင့်အနေဲ့ [PHP Binaries ][php-downloads] ကို download လုပ်ပြီး setup လုပ်တာဒါမှမဟုတ် '.msi' installer နဲ့လည်းလုပ်နိုင်ပါတယ်။ ဒါပေမယ့် installer ကို support လုပ်တာကို PHP 5.3.0 မှာရပ်လိုက်ပါပြီ။
 
-For learning and local development you can use the built in webserver with PHP 5.4+ so you don't need to worry about configuring it. If you 
-would like an "all-in-one" which includes a full-blown webserver and MySQL too then tools such as the [Web Platform Installer][wpi], 
-[Zend Server CE][zsce], [XAMPP][xampp], [EasyPHP][easyphp] and [WAMP][wamp] will help get a Windows development environment up and running fast. That said, these tools will be 
-a little different from production so be careful of environment differences if you are working on Windows and deploying to Linux.
+သင့်အနေနဲ့ PHP 5.4 နဲ့အထက်မှာ build in webserver ကို configuration အတွက်ဘာမှမပူဘဲနဲ့ လေ့လာဖို့ရန်အတွက်နဲ့ local developement အတွက်အသုံးပြုနိုင်ပါတယ်။ သင့်အနေနဲ့ webserver နဲ့ MySQL ပါပါတဲ့ "all-in-one" installer တွေကိုသုံးပြီး install လုပ်ချင်တယ်ဆိုရင်တော့ [Web Platform Installer][wpi], 
+[Zend Server CE][zsce], [XAMPP][xampp], [EasyPHP][easyphp] နဲ့ [WAMP][wamp] software တွေက window development ကိုလျှင်မြန်စွာ setup လုပ်ပေးပါလိမ့်မယ်။ ဒါကဘာကိုဆိုလိုတာလည်းဆိုရင် အဲ့ဒီ tools တွေက production နဲ့မတူညီတဲ့အတွက် သင်က window မှာ develop လုပ်ပြီး linux မှာ deploy လုပ်ရင် environment setup ကိုတော့ ဂရုဆိုက်ရပါ့မယ်။
 
-If you need to run your production system on Windows then IIS7 will give you the most stable and best performance. You can use 
-[phpmanager][phpmanager] (a GUI plugin for IIS7) to make configuring and managing PHP simple. IIS7 comes with FastCGI built in and ready 
-to go, you just need to configure PHP as a handler. For support and additional resources there is a [dedicated area on iis.net][php-iis] for 
-PHP.
+သင့်အနေနဲ့ Production က Window မှာဆိုရင် IIS7 ကအကောင်းဆုံးစွမ်းဆောင်ရည်ကိုပေးပါ့လိမ့်မယ်။ သင့်အနေနဲ့ PHP Configuration လွယ်ကူစွာ Manage လုပ်နိုင်ရန်အတွက် [phpmanager][phpmanager] (IIS7 အတွက် GUI plugin) ကိုအသုံးပြုနိုင်ပါတယ်။ သင့်အနေနဲ့ IIS7 မှာ PHP Handler တစ်ခုအနေနဲ့ configuration လုပ်ရုံပါဘဲ ဘာလို့လည်းဆိုရင် IIS7 မှာ FastCGI က built in ပါဝင်တာမလို့ပါဘဲ။ PHP ကို IIS7 မှာ Install လုပ်ရာမှာ Support နဲ့အခြား resources တွေကိုတော့ [iis.net][php-iis] မှာကြည့်နိုင်ဖတ်နိုင်ပါတယ်။
 
 [php-downloads]: http://windows.php.net
 [phpmanager]: http://phpmanager.codeplex.com/

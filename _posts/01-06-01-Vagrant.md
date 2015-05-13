@@ -5,30 +5,23 @@ anchor: vagrant
 
 ## Vagrant {#vagrant_title}
 
-Running your application on different environments in development and production can lead to strange bugs 
-popping up when you go live. It's also tricky to keep different development environments up to date with the same 
-version for all libraries used when working with a team of developers. 
 
-If you are developing on Windows and deploying to Linux (or anything non-Windows) or are developing in a team, you 
-should consider using a virtual machine. This sounds tricky, but by using [Vagrant][vagrant] you can set up a simple 
-virtual machine with only a few steps. These base boxes can then be set up manually, or you can use "provisioning" 
-software such as [Puppet][puppet] or [Chef][chef] to do this for you. Provisioning the base box is a great way to 
-ensure that multiple boxes are set up in an identical fashion and removes the need for you to maintain complicated 
-"set up" command lists. You can also "destroy" your base box and recreate it without many manual steps, making it
-easy to create a "fresh" installation.
+တကယ်လို့သာ သင့်ရဲ့ application ကို ကွဲပြားလှတဲ့ enivornment များ run ဖူးရင် ဘယ်လိုရှင်းရမှန်းမသိတဲ့ ထူးဆန်းအံဩဖွယ်ရာ bugs တွေကို တွေ့ရမှာ ဖြစ်ပါတယ်။ တကယ်လို့သာ team နဲ့ အလုပ်လုပ်တဲ့ အခါက မတူညီတဲ့ developer တွေရဲ့ environment ပေါ်မူတည်ပြီး libraries တွေရဲ့ version ကို maintain လုပ်ရတာ ခက်ခဲပါတယ်။ 
 
-Vagrant creates folders for sharing your code between your host and your virtual machine, which means that you can 
-create and edit your files on your host machine and then run the code inside your virtual machine.
+တကယ်လို့သင်က Windows ပေါ်က develop လုပ်နေပြီး Linux ဒါမှမဟုတ် Window မဟုတ်တဲ့ OS တစ်ခုခုကို deploy လုပ်တာဖြစ်ဖြစ် ၊ team အနေနဲ့အလုပ်လုပ်ရင်ဖြစ်ဖြစ် virtual machine တစ်ခုခုကို အသုံးပြုဖို့ စဉ်းစားသင့်ပါတယ်။ ကြားရတာ ရှုပ်ထွေးပေမယ့် တကယ်တမ်း [Vagrant][vagrant]
+ကိုအသုံးပြုပြီး သင့်အနေနဲ့ လွယ်ကူရှင်းလင်းတဲ့ virtual machine တစ်ခုကို အဆင့်အနည်းငယ်တွင်းမှာ ဖန်တီးနိုင်ပါတယ်။ ထို အခြေခံ Box များကို manually ဖြစ်စေ ၊ [Puppet][puppet] နှင့် [Chef][chef] တို့ကို အသုံးပြုပြီး အလွယ်တကူ ဖန်တီးနိုင်ပါတယ်။ ထိုသို့ပြုလုပ်ခြင်းအားဖြင့် Box များစွာ တူညီစွာတည်ရှိမှာ ဖြစ်ပြီးတော့ သင့်အနေနဲ့ ရှုပ်ထွေးလှတဲ့  "set up" command များကို မှတ်မိစရာမလိုတော့ပါဘူး။ အသုံးမပြုလိုပါကလည်း အလွယ်တကူ ဖျက်ပစ်နိုင်သလို ပြန်၍ ဖန်တီးချင်ရင်လည်း မခက်ခဲလှပါဘူး။ 
 
-### A little help
+Vagrant အနေနဲ့ Host နဲ့ Virtual Machine အကြား share လုပ်ပေးတဲ့ folders များဖန်တီးပေးတဲ့အတွက် host machine များ file များ ဖန်တီး ၊ ပြင်ဆင် နိုင်ပြီး virtual machine တွင် ပြန်ပြီး run နိုင်ပါသည်။ 
 
-If you need a little help to start using Vagrant there are three services that might be useful:
 
-- [Rove][rove]: service that allows you to pre-generate typical Vagrant builds, PHP among the options. The
-  provisioning is made with Chef.
-- [Puphpet][puphpet]: simple GUI to set up virtual machines for PHP development. **Heavily focused in PHP**. Besides
-  local VMs, can be used to deploy to cloud services as well. The provisioning is made with Puppet.
-- [Protobox][protobox]: is a layer on top of vagrant and a web GUI to setup virtual machines for web development. A single YAML document controls everything that is installed on the virtual machine.
+### အကူအညီ
+
+သင့်အနေနဲ့ Vagrant အသုံးပြုရမှာ မရင်းနှီးပါက အောက်ပါလင့်များကို ဖတ်ရှုနိုင်ပါသည်။ 
+
+- [Rove][rove]: Vagrant builds များကို Chef ကိုအသုံးပြု၍ ကြိုပြီးထုတ်နိုင်ပြီး ရွေးချယ်စရာများတွင် PHP လည်းပါဝင်သည်။ 
+- [Puphpet][puphpet]: PHP development အတွက် virutal machine များကို GUI မှတစ်ဆင့် ရွေးချယ် set up ပြုလုပ်နိုင်သည်။ **PHP ကို အဓိကထားထားပြီး**
+local VMs များကို cloud service များတွင် deploy လုပ်နိုင်သည်။ 
+- [Protobox][protobox]: GUI ကိုအသုံးပြု၍ vagrant အခြေပြု virtual machine များကို ဖန်တီးနိုင်သည်။ virtual machine တွင် ပြုလုပ်လိုသည်များကို YAML document တစ်ခုတည်းဖြင့်သာ ထိန်းချုပ်နိုင်သည်။ 
 
 [vagrant]: http://vagrantup.com/
 [puppet]: http://www.puppetlabs.com/
